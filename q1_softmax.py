@@ -24,6 +24,7 @@ def softmax(x):
     """
 
     ### YOUR CODE HERE
+    out = np.exp(x)/np.sum(np.exp(x))
     ### END YOUR CODE
 
     return out
@@ -54,6 +55,7 @@ def cross_entropy_loss(y, yhat):
     """
 
     ### YOUR CODE HERE
+    out = np.sum(-y*np.log(yhat))
     ### END YOUR CODE
 
     return out
